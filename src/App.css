@@ -1,0 +1,40 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  /* background-image: url('./assets/ep_naturalblack.png'); */
+  /* background-size: cover; */
+}
+
+svg {
+  border: 2px dashed red;
+  filter: drop-shadow(2px 2px 2px #020f1d);
+}
+
+#center-text, #level_1_text_1  {
+  font-family: 'PT Mono', monospace;
+  font-weight: bold;
+}
+#center-text {
+  font-size: 0.85em;
+  /* text-shadow: 1px 1px 1px rgb(87, 86, 86); */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  
+}
+
+
+
+@media (min-width: 768px) {
+  #center-text {
+    font-size: 1.05em;
+    letter-spacing: 2.5px;
+  }
+  #level_1_text_1 {
+    font-size: 0.75em;
+  }
+}
