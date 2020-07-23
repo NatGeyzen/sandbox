@@ -1,4 +1,6 @@
 import React from 'react';
+import { x_position, y_position } from './svg_values';
+import classes from './svg.module.css';
 
 const SVGtext = (props) => {
 
@@ -7,26 +9,61 @@ const SVGtext = (props) => {
 
     if (props.id === "center-text") {
         if (window.innerWidth < 768) {
-            x = (window.innerWidth / 2) - 42.5;
-            y = (window.innerHeight / 2) + 10;
+            x = x_position.x_0 - 39;
+            y = y_position.y_0 + 9;
         } else {
-            x = (window.innerWidth / 2) - 52;
-            y = (window.innerHeight / 2) + 12.5;
+            x = x_position.x_0 - 52;
+            y = y_position.y_0 + 12.5;
         }   
     }
 
     else if (props.id === "level_1_text_1") {
         if (window.innerWidth < 768) {
-            x = window.innerWidth * 0.65;
-            y = window.innerHeight * 0.25;
+            x = x_position.x_1_phone - 36;
+            y = y_position.y_1_phone + 5;
         } else {
-            x = window.innerWidth * 0.62;
-            y = window.innerHeight * 0.26;
+            x = x_position.x_1_tabtop - 47.5;
+            y = y_position.y_1_tabtop + 7;
         }       
+    }
+    else if (props.id === "level_1_text_2") {
+        if (window.innerWidth < 768) {
+            x = x_position.x_2_phone - 36;
+            y = y_position.y_2_phone + 5;
+        } else {
+            x = x_position.x_2_tabtop - 47.5;
+            y = y_position.y_2_tabtop + 7;
+        }       
+    }
+    else if (props.id === "level_1_text_3") {
+        if (window.innerWidth < 768) {
+            x = x_position.x_3_phone - 36;
+            y = y_position.y_3_phone + 5;
+        } else {
+            x = x_position.x_3_tabtop - 47.5;
+            y = y_position.y_3_tabtop + 7;
+        }       
+    }
+    else if (props.id === "level_1_text_4") {
+        if (window.innerWidth < 768) {
+            x = x_position.x_4_phone - 31;
+            y = y_position.y_4_phone + 5;
+        } else {
+            x = x_position.x_4_tabtop - 41;
+            y = y_position.y_4_tabtop + 5;
+        }         
+    }
+    else if (props.id === "level_1_text_5") {
+        if (window.innerWidth < 768) {
+            x = x_position.x_5_phone - 20;
+        } else {
+            x = x_position.x_5_tabtop - 28;
+        }  
+        y = y_position.y_5 + 7;     
     }
 
     return (
-        <text x={x} y={y} fill={color} id={props.id}>
+        <text x={x} y={y} fill={color} id={props.id} className={classes.clickable}>
             {props.children}
         </text> 
     )
